@@ -12,7 +12,7 @@
     .container {
       max-width: 768px;
       margin: 0 auto;
-      line-height: 0; /* 이미지 사이 여백 제거 */
+      line-height: 0;
     }
     img {
       display: block;
@@ -22,18 +22,63 @@
       padding: 0;
       border: none;
     }
+    /* 지도 전용 영역 */
+    .map-section {
+      position: relative;
+      width: 100%;
+    }
+    .map-section img {
+      width: 100%;
+      display: block;
+    }
+    #map {
+      position: absolute;
+      top: 25%;   /* 이미지 위에서부터 위치, 필요시 조정 */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;   /* 지도 너비 */
+      height: 300px; /* 지도 높이 */
+      border: 2px solid #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
   </style>
-  
 </head>
 <body>
   <div class="container">
     <img src="ch1.png" alt="포스터">
     <img src="ch2.png" alt="초대장">
-    <img src="ch3.png" alt="오시는 길">
+
+    <!-- ch3 + 지도 -->
+    <div class="map-section">
+      <img src="ch3.png" alt="오시는 길">
+      <div id="map"></div>
+    </div>
+
     <img src="ch4.png" alt="프로그램안내">
     <img src="ch5.png" alt="프로그램안내2">
     <img src="ch6.png" alt="프로그램안내3">
     <img src="ch7.png" alt="배치도">
+
+    
   </div>
+
+  <!-- 카카오맵 JS -->
+  <script type="text/javascript" 
+          src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=dfb16280a0eecd09911831d01a7b447a"></script>
+
+  <script>
+    var container = document.getElementById('map');
+    var options = {
+      center: new kakao.maps.LatLng(37.48822, 127.06245), // 📍 아치울어린이공원 근처 좌표 (예시)
+      level: 3
+    };
+    var map = new kakao.maps.Map(container, options);
+
+    // 마커 추가 (선택)
+    var marker = new kakao.maps.Marker({
+      position: new kakao.maps.LatLng(37.48822, 127.06245)
+    });
+    marker.setMap(map);
+  </script>
 </body>
 </html>
