@@ -1,234 +1,35 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>초대합니다</title>
-    <!-- Pretendard 폰트 CDN -->
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
-    <!-- Satoshi 폰트 CDN -->
-    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@1,900,700,500,300,400&display=swap" rel="stylesheet">
-    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=YOUR_KAKAO_MAP_API_KEY_HERE"></script>
-    <style>
-        /* 기본 스타일 (모든 기기) */
-        body {
-            font-family: 'Pretendard', sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            background-color: #0d1223; /* 원본 이미지 배경색에 맞춰 조정 */
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        /* 챕터 1: 이미지 섹션 */
-        .chapter1 {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* 챕터 2: 텍스트 섹션 */
-        .chapter2 {
-            background-color: #0d1223;
-            color: #fff;
-            padding: 40px 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            position: relative;
-        }
-
-        .text-section {
-            text-align: left;
-            line-height: 1.8;
-            padding: 0 15px;
-        }
-
-        .text-section h1 {
-            font-size: 32px;
-            font-weight: 700;
-            color: #fff;
-        }
-        
-        /* 챕터 2 스타일 조정 */
-        .text-section .date-info {
-            font-size: 16px;
-            font-weight: 400;
-            color: #ccc;
-            margin-top: 10px;
-            line-height: 1.5;
-        }
-
-        .text-section .invitation-title {
-            font-family: 'Satoshi', sans-serif;
-            font-size: 20px;
-            font-weight: bold;
-            color: #fff;
-            margin-top: 30px;
-        }
-
-        .text-section p {
-            font-size: 16px;
-            margin-top: 20px;
-            color: #ddd;
-            line-height: 1.8;
-        }
-
-        .text-section .signature {
-            font-size: 16px;
-            text-align: left;
-            margin-top: 40px;
-            color: #aaa;
-        }
-        
-        .chapter2 .footer-title-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            margin-top: 40px;
-        }
-
-        .chapter2 .footer-title {
-            font-family: 'Pretendard', sans-serif;
-            font-size: 24px;
-            font-weight: 700;
-            color: #fff;
-            text-align: left;
-        }
-
-        .chapter2 .logo-img {
-            width: 80px; /* 로고 크기 조정 */
-            height: auto;
-            display: block;
-            margin-left: 10px;
-            margin-bottom: 0px;
-        }
-
-        /* 챕터 3: 지도 섹션 */
-        .chapter3 {
-            background-color: #000;
-            padding: 30px 20px;
-        }
-
-        .map-section {
-            text-align: center;
-        }
-
-        .map-section h2 {
-            font-size: 28px;
-            color: #80b3ff;
-            font-weight: 700;
-            margin-bottom: 20px;
-            font-family: 'Pretendard', sans-serif;
-        }
-
-        #map {
-            width: 100%;
-            height: 400px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-
-        .address-info {
-            margin-top: 20px;
-            font-size: 16px;
-            color: #fff;
-            font-weight: 500;
-        }
-        
-        .naver-map-logo {
-            margin-top: 20px;
-        }
-
-        /* 미디어 쿼리 (모바일 최적화) */
-        @media (max-width: 600px) {
-            .text-section h1 {
-                font-size: 24px;
-            }
-            .text-section p, .text-section .signature, .address-info {
-                font-size: 14px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>제20회 아치울 작은 음악회</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Noto Sans KR", sans-serif;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+    .container {
+      max-width: 768px;
+      margin: 0 auto;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+  </style>
 </head>
 <body>
-
-    <!-- 챕터 1: 전체 이미지 -->
-    <img src="https://placehold.co/800x1156/0d1223/FFF?text=CHAPTER+1" alt="챕터 1 이미지" class="chapter1">
-
-    <!-- 챕터 2: 텍스트 구성 -->
-    <div class="chapter2">
-        <div class="text-section">
-            <h1>초대합니다</h1>
-            <p class="date-info">
-                2025.09.28 (주일)<br>
-                오후 2시 아치울어린이공원
-            </p>
-            <p class="invitation-title">
-                ‘제 20회 아치울 작은 음악회'에 초대합니다.
-            </p>
-            <p>
-                어느새 20회를 맞이하는 아치울 작은 음악회<br>
-                가을의 정취와 함께 빚어내는 이번 음악회는<br>
-                비록 이름은 작은 음악회이지만<br>
-                큰 감동과 여운을 남기는 시간일 것입니다.<br>
-                언제나 믿고 보는 아치울 작은 음악회에<br>
-                여러분을 초대합니다.<br>
-                사랑하는 가족, 이웃, 친구들과<br>
-                추억을 쌓아가시기 바랍니다.
-            </p>
-            <p class="signature">
-                아천동교회 위임목사<br>
-                김상호 드림
-            </p>
-            <div class="footer-title-container">
-                <p class="footer-title">
-                    제 20회 아치울 작은 음악회
-                </p>
-                <img class="logo-img" src="https://via.placeholder.com/80x80?text=Logo" alt="교회 로고">
-            </div>
-        </div>
-    </div>
-
-    <!-- 챕터 3: 지도 섹션 -->
-    <div class="chapter3">
-        <div class="map-section">
-            <h2>오시는 길</h2>
-            <div id="map"></div>
-            <div class="address-info">
-                서울 광진구 아차산로 123
-            </div>
-            <img class="naver-map-logo" src="https://via.placeholder.com/100x20?text=Naver+Map+Logo" alt="네이버 지도 로고">
-        </div>
-    </div>
-
-    <script>
-        window.onload = function() {
-            // 카카오 지도 초기화
-            var mapContainer = document.getElementById('map'), // 지도를 표시할 div
-                mapOption = { 
-                    center: new kakao.maps.LatLng(37.5518, 127.0739), // 지도의 중심좌표 (아차산로 123 근처)
-                    level: 3 // 지도의 확대 레벨
-                };
-            
-            var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-
-            // 마커가 표시될 위치
-            var markerPosition  = new kakao.maps.LatLng(37.5518, 127.0739); 
-
-            // 마커를 생성
-            var marker = new kakao.maps.Marker({
-                position: markerPosition
-            });
-
-            // 마커를 지도에 표시
-            marker.setMap(map);
-        };
-    </script>
-
+  <div class="container">
+    <img src="ch1.png" alt="초대합니다">
+    <img src="ch2.png" alt="프로그램 안내">
+    <img src="ch3.png" alt="오시는 길">
+    <img src="ch4.png" alt="포스터">
+  </div>
 </body>
 </html>
