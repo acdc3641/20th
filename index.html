@@ -1,123 +1,93 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>제20회 아치울 작은 음악회</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: #fff;
-    }
-    .container {
-      max-width: 768px;
-      margin: 0 auto;
-      line-height: 0;
-    }
-    img {
-      display: block;
-      width: 100%;
-      height: auto;
-      margin: 0;
-      padding: 0;
-      border: none;
-    }
-    /* ch3 전용 영역 */
-    .map-section {
-      position: relative;
-      width: 100%;
-    }
-    .map-section img {
-      width: 100%;
-      display: block;
-    }
-    .map-overlay {
-      position: absolute;
-      top: 25%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 85%;
-      height: 500px;
-    }
-    .root_daum_roughmap {
-      width: 100% !important;
-      height: 100% !important;
-    }
+  <meta charset="UTF-8">
+  <title>제20회 아치울 작은 음악회</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fff;
+    }
+    .container {
+      max-width: 768px;
+      margin: 0 auto;
+      line-height: 0;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
+    /* ch3 전용 영역 */
+    .map-section {
+      position: relative;
+      width: 100%;
+    }
+    .map-section img {
+      width: 100%;
+      display: block;
+    }
+    .map-overlay {
+      position: absolute;
+      top: 25%;   /* ch3 이미지 안에서 위치 조정 */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 85%;   /* 지도 너비 */
+      height: 500px; /* 지도 높이 */
+    }
+    .root_daum_roughmap {
+      width: 100% !important;
+      height: 100% !important;
+    }
 
+        /* 👇 주소/전화/하단 텍스트 숨김 */
+    .root_daum_roughmap .roughmap_maker_address,
+    .root_daum_roughmap .roughmap_lead,
+    .root_daum_roughmap .wrap_mapinfo,
+    .root_daum_roughmap .roughmap_maker_contact {
+      display: none !important;
+    }
 
-.root_daum_roughmap .roughmap_maker_address,
-.root_daum_roughmap .roughmap_lead,
-.root_daum_roughmap .wrap_mapinfo,
-.root_daum_roughmap .roughmap_maker_contact {
-  display: none !important;
-}
     
-    /* 지도 앱 링크 아이콘 영역 스타일 (새로 추가) */
-    .map-links-container {
-      background-color: #f7f7f7;
-      padding: 20px 0;
-      display: flex;
-      justify-content: center; /* 아이콘을 가로 중앙에 정렬 */
-      align-items: center;
-      gap: 20px; /* 아이콘 간 간격 */
-    }
-    .map-links-container a img {
-      width: 50px; /* 아이콘 크기 조절 */
-      height: 50px;
-      border-radius: 10px; /* 둥근 모서리 */
-    }
-  </style>
+  </style>
 </head>
 <body>
-  <div class="container">
-    <img src="ch1.png" alt="초대합니다">
-    <img src="ch2.png" alt="프로그램 안내">
+  <div class="container">
+    <img src="ch1.png" alt="초대합니다">
+    <img src="ch2.png" alt="프로그램 안내">
 
-    <!-- ch3 + 지도 -->
-    <div class="map-section">
-      <img src="ch3.png" alt="오시는 길">
+    <!-- ch3 + 지도 -->
+    <div class="map-section">
+      <img src="ch3.png" alt="오시는 길">
 
-      <div class="map-overlay">
-        <!-- 카카오맵 - 지도퍼가기 -->
-        <div id="daumRoughmapContainer1756911424050" class="root_daum_roughmap root_daum_roughmap_landing"></div>
-      </div>
-    </div>
+      <div class="map-overlay">
+        <!-- 카카오맵 - 지도퍼가기 -->
+        <div id="daumRoughmapContainer1756911424050" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+      </div>
+    </div>
 
-    <!-- 지도 앱 바로가기 아이콘 영역 (새로 추가) -->
-    <div class="map-links-container">
-      <!-- 네이버 지도로 연결 -->
-      <a href="https://map.naver.com/v5/search/%EC%95%84%EC%B9%98%EC%9A%B8%20%EC%A7%80%EA%B5%AC?c=15.00,0,0,0,dh" target="_blank">
-        <img src="n.webp" alt="네이버 지도">
-      </a>
-      <!-- 카카오내비로 연결 -->
-      <a href="kakaonavi://route?dest_name=%EC%95%84%EC%B9%98%EC%9A%B8%20%EC%A7%80%EA%B5%AC&dest_x=127.0987&dest_y=37.5857" target="_blank">
-        <img src="k.png" alt="카카오내비">
-      </a>
-      <!-- T맵으로 연결 -->
-      <a href="tmap://route?name=%EC%95%84%EC%B9%98%EC%9A%B8%20%EC%A7%80%EA%B5%AC&lon=127.0987&lat=37.5857" target="_blank">
-        <img src="t.png" alt="T맵">
-      </a>
-    </div>
+    <img src="ch4.png" alt="프로그램안내">
+    <img src="ch5.png" alt="프로그램안내2">
+    <img src="ch6.png" alt="프로그램안내3">
+    <img src="ch7.png" alt="배치도">
+  </div>
 
-    <img src="ch4.png" alt="프로그램안내">
-    <img src="ch5.png" alt="프로그램안내2">
-    <img src="ch6.png" alt="프로그램안내3">
-    <img src="ch7.png" alt="배치도">
-  </div>
+  <!-- 설치 스크립트 (1회만) -->
+  <script charset="UTF-8" class="daum_roughmap_loader_script" 
+          src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
 
-  <!-- 설치 스크립트 (1회만) -->
-  <script charset="UTF-8" class="daum_roughmap_loader_script" 
-          src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
-
-  <!-- 실행 스크립트 -->
-  <script charset="UTF-8">
-    new daum.roughmap.Lander({
-      "timestamp" : "1756911424050",
-      "key" : "8hxzucch9so",
-      "mapWidth" : "100%",  /* 오버레이 영역에 맞추기 */
-      "mapHeight" : "100%"
-    }).render();
-  </script>
+  <!-- 실행 스크립트 -->
+  <script charset="UTF-8">
+    new daum.roughmap.Lander({
+      "timestamp" : "1756911424050",
+      "key" : "8hxzucch9so",
+      "mapWidth" : "100%",  /* 오버레이 영역에 맞추기 */
+      "mapHeight" : "100%"
+    }).render();
+  </script>
 </body>
 </html>
