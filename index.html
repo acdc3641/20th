@@ -1,91 +1,38 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>제20회 아치울 작은 음악회</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: #fff;
-    }
-    .container {
-      max-width: 768px;
-      margin: 0 auto;
-      line-height: 0;
-    }
-    img {
-      display: block;
-      width: 100%;
-      height: auto;
-      margin: 0;
-      padding: 0;
-      border: none;
-    }
-    /* ch3 전용 영역 */
-    .map-section {
-      position: relative;
-      width: 100%;
-      line-height: 0;
-    }
-    .map-section img {
-      width: 100%;
-      display: block;
-    }
-    #map {
-      position: absolute;
-      top: 25%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 85%;
-      height: 500px;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>제20회 아치울 작은 음악회</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fff;
+    }
+    .container {
+      max-width: 768px;
+      margin: 0 auto;
+      line-height: 0; /* 이미지 사이 여백 제거 */
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <img src="ch1.png" alt="초대합니다">
-    <img src="ch2.png" alt="프로그램 안내">
-
-    <!-- ch3 + 지도 -->
-    <div class="map-section">
-      <img src="ch3.png" alt="오시는 길">
-      <!-- 카카오맵 API 지도로 변경 -->
-      <div id="map"></div>
-    </div>
-
-    <img src="ch4.png" alt="프로그램안내">
-    <img src="ch5.png" alt="프로그램안내2">
-    <img src="ch6.png" alt="프로그램안내3">
-    <img src="ch7.png" alt="배치도">
-  </div>
-
-  <!-- 카카오맵 API 스크립트 -->
-  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=dfb16280a0eecd09911831d01a7b447a"></script>
-  <script>
-    var container = document.getElementById('map');
-    var options = {
-      center: new kakao.maps.LatLng(37.5747043,127.1183793),
-      level: 3
-    };
-
-    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-
-// 마커가 표시될 위치입니다 
-var markerPosition  = new kakao.maps.LatLng(37.5747043,127.1183793); 
-
-// 마커를 생성합니다
-var marker = new kakao.maps.Marker({
-    position: markerPosition
-});
-
-// 마커가 지도 위에 표시되도록 설정합니다
-marker.setMap(map);
-
-    var map = new kakao.maps.Map(container, options);
-
-    
-  </script>
+  <div class="container">
+    <img src="ch1.png" alt="포스터">
+    <img src="ch2.png" alt="초대장">
+    <img src="ch3.png" alt="오시는 길">
+    <img src="ch4.png" alt="프로그램안내">
+    <img src="ch5.png" alt="프로그램안내2">
+    <img src="ch6.png" alt="프로그램안내3">
+    <img src="ch7.png" alt="배치도">
+  </div>
 </body>
 </html>
