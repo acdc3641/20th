@@ -37,14 +37,13 @@
       left: 50%;
       transform: translateX(-50%);
       width: 85%;   /* 지도 너비 */
-      height: 500px; /* 지도 높이 */
+      height: 700px; /* 지도 높이 */
     }
     .root_daum_roughmap {
       width: 100% !important;
       height: 100% !important;
     }
 
-        /* 👇 주소/전화/하단 텍스트 숨김 */
     .root_daum_roughmap .roughmap_maker_address,
     .root_daum_roughmap .roughmap_lead,
     .root_daum_roughmap .wrap_mapinfo,
@@ -52,6 +51,9 @@
       display: none !important;
     }
 
+    .root_daum_roughmap .wrap_cont {
+    display: none !important;
+}
     
   </style>
 </head>
@@ -89,5 +91,7 @@
       "mapHeight" : "100%"
     }).render();
   </script>
+
+  
 </body>
 </html>
