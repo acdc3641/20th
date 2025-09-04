@@ -22,6 +22,24 @@
       padding: 0;
       border: none;
     }
+
+    /* 모바일 화면 (일반적으로 768px 이하) */
+@media screen and (max-width: 768px) {
+  /* 페이지 전체 너비를 100%로 설정하고 여백을 없앱니다. */
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* 만약 특정 컨테이너에 여백이 있다면 해당 클래스/ID를 사용합니다. */
+  /* .container {
+    width: 100%;
+    max-width: none; /* 최대 너비 제한 해제 */
+    margin: 0;
+    padding: 0;
+  } */
+}
   </style>
 </head>
 <body>
