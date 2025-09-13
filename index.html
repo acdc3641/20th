@@ -1,87 +1,97 @@
 <!DOCTYPE html>
-
 <html lang="ko">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>제20회 아치울 작은 음악회</title>
-
-    <meta property="og:url" content="https://acdc3641.github.io/20th" />
-
-    <meta property="og:title" content="초대합니다" />
-
-    <meta property="og:description" content="제20회 아치울 작은 음악회" />
-
-    <meta property="og:image" content="https://acdc3641.github.io/20th/th_1.png" />
-
-    <style>
-
-        body {
-
-            margin: 0;
-
-            padding: 0;
-
-            background: #fff;
-
-        }
-
-        .container {
-
-            max-width: 100%;
-
-            margin: 0 auto;
-
-            line-height: 0;
-
-        }
-
-        img {
-
-            display: block;
-
-            width: 100%;
-
-            height: auto;
-
-            margin: 0;
-
-            padding: 0;
-
-            border: none;
-
-        }
-
-
-
-    </style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제20회 아치울 작은 음악회</title>
+    <meta property="og:url" content="https://acdc3641.github.io/20th" />
+    <meta property="og:title" content="초대합니다" />
+    <meta property="og:description" content="제20회 아치울 작은 음악회" />
+    <meta property="og:image" content="https://acdc3641.github.io/20th/th_1.png" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #fff;
+        }
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            line-height: 0;
+            text-align: center;
+        }
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+        /* 이미지 위에 겹치는 영역 */
+        .overlay {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+        .overlay img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .overlay-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0.4); /* 반투명 배경 */
+            padding: 20px;
+            border-radius: 12px;
+        }
+        .buttons {
+            margin-top: 12px;
+        }
+        .buttons a {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px 18px;
+            background: #ff6b6b;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        .buttons a:hover {
+            background: #e05555;
+        }
+    </style>
 </head>
-
 <body>
+    <div class="container">
+        <img src="ch1.png" alt="포스터">
+        <img src="ch2.png" alt="초대장">
 
-    <div class="container">
+        <!-- ch3.png + 오버레이 -->
+        <div class="overlay">
+            <img src="ch3.png" alt="초대장">
+            <div class="overlay-content">
+                주소: 경기도 구리시 아천동 353-29 아치울2호공원
+                <div class="buttons">
+                    <a href="https://kko.kakao.com/ouHV-qQ_jI" target="_blank">카카오맵</a>
+                    <a href="https://map.naver.com/p/entry/place/1686757740?placePath=%2Fhome" target="_blank">네이버 지도</a>
+                </div>
+            </div>
+        </div>
 
-        <img src="ch1.png" alt="포스터">
-
-        <img src="ch2.png" alt="초대장">
-
-        <img src="ch3.png" alt="초대장">
-
-        <img src="ch4.png" alt="프로그램안내">
-
-        <img src="ch5.png" alt="프로그램안내2">
-
-        <img src="ch6.png" alt="프로그램안내3">
-
-        <img src="ch7.png" alt="배치도">
-
-    </div>
-
+        <img src="ch4.png" alt="프로그램안내">
+        <img src="ch5.png" alt="프로그램안내2">
+        <img src="ch6.png" alt="프로그램안내3">
+        <img src="ch7.png" alt="배치도">
+    </div>
 </body>
-
-</html> 
+</html>
