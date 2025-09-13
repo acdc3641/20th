@@ -28,82 +28,13 @@
             border: none;
         }
 
-        /* 오시는 길 섹션 스타일 */
-        .map-section {
-            position: relative;
-            width: 100%;
-            /* 배경 이미지 속성 */
-            background-image: url('ch3.png');
-            background-size: cover; /* 이미지가 찌그러지지 않고 컨테이너를 꽉 채우도록 설정 */
-            background-position: center;
-            background-repeat: no-repeat;
-            /* 이미지 비율에 맞게 높이 설정 (예: 4:3 비율이라면 75%) */
-            padding-bottom: 75%; 
-            line-height: 0;
-        }
-        
-        /* 주소 텍스트와 버튼을 담는 컨테이너 */
-        .address-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100%;
-            text-align: center;
-            padding: 20px 0;
-            box-sizing: border-box;
-        }
-
-        .address-overlay p {
-            color: #2371CD;
-            font-size: 18px;
-            font-weight: bold;
-            line-height: 1.5;
-            margin-bottom: 20px;
-        }
-
-        .map-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-        
-        .map-buttons a {
-            display: inline-block;
-            background-color: #2371CD;
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 12px 24px;
-            border-radius: 9999px;
-            font-size: 16px;
-            line-height: 1.5;
-            white-space: nowrap;
-        }
-
-        @media screen and (max-width: 768px) {
-            .map-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
     </style>
 </head>
 <body>
     <div class="container">
         <img src="ch1.png" alt="포스터">
         <img src="ch2.png" alt="초대장">
-        
-        <div class="map-section">
-            <div class="address-overlay">
-                <p>주소 : 경기도 구리시 아천동 353-29 아치울2호공원</p>
-                <div class="map-buttons">
-                    <a href="https://kko.kakao.com/ouHV-qQ_jI" target="_blank">카카오맵</a>
-                    <a href="https://map.naver.com/p/entry/place/1686757740?placePath=%2Fhome" target="_blank">네이버 지도</a>
-                </div>
-            </div>
-        </div>
-        
+        <img src="ch3.png" alt="초대장">
         <img src="ch4.png" alt="프로그램안내">
         <img src="ch5.png" alt="프로그램안내2">
         <img src="ch6.png" alt="프로그램안내3">
