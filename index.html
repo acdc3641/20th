@@ -28,13 +28,7 @@
       border: none;
     }
 
-    /* 카카오맵과 버튼을 위한 스타일 */
-    .map-section {
-      position: relative;
-      width: 70%;
-      overflow: hidden;
-    }
-
+    /* 버튼을 위한 스타일 */
     .map-buttons {
       display: flex;
       justify-content: center;
@@ -81,22 +75,10 @@
     <img src="ch1.png" alt="포스터">
     <img src="ch2.png" alt="초대장">
     
-    <!-- 카카오맵과 버튼이 들어갈 섹션 -->
+    <!-- 버튼이 들어갈 섹션 -->
     <div class="map-section">
-      <img src="ch3.png" alt="배경" style="position: absolute; top: 300px; left: 0; z-index: -1;">
-      
-      <!-- 카카오맵 지도 -->
-      <div id="daumRoughmapContainer1757774405078" class="root_daum_roughmap root_daum_roughmap_landing" style="position: relative; z-index: 1;"></div>
-      <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
-      <script charset="UTF-8">
-        new daum.roughmap.Lander({
-          "timestamp" : "1757774405078",
-          "key" : "93imuozy6yz",
-          "mapWidth" : "100%", /* 지도를 화면 너비에 맞게 조정 */
-          "mapHeight" : "360"
-        }).render();
-      </script>
-      
+      <img src="ch3.png" alt="배경">
+<p class="address-text">주소 : 경기도 구리시 아천동 353-29 아치울2호공원</p>
       <!-- 지도 바로가기 버튼 -->
       <div class="map-buttons">
         <a href="https://map.kakao.com" target="_blank">카카오맵 바로가기</a>
