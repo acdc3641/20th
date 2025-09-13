@@ -17,7 +17,7 @@
         .container {
             max-width: 100%;
             margin: 0 auto;
-            line-height: 0; /* 이미지 사이 여백 제거 */
+            line-height: 0;
         }
         img {
             display: block;
@@ -30,30 +30,27 @@
 
         /* 오시는 길 섹션 스타일 */
         .map-section {
-            position: relative; /* 중요: 내부 요소의 기준점 */
+            position: relative;
             width: 100%;
-             height: auto;
-            padding-bottom: 100%; /* 이미지가 1:1 비율일 경우 (조절 필요) */
+            /* 배경 이미지 속성 */
+            background-image: url('ch3.png');
+            background-size: cover; /* 이미지가 찌그러지지 않고 컨테이너를 꽉 채우도록 설정 */
+            background-position: center;
+            background-repeat: no-repeat;
+            /* 이미지 비율에 맞게 높이 설정 (예: 4:3 비율이라면 75%) */
+            padding-bottom: 75%; 
             line-height: 0;
         }
-        .map-section img {
-            position: absolute; /* 컨테이너에 맞춰 배치 */
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
+        
         /* 주소 텍스트와 버튼을 담는 컨테이너 */
         .address-overlay {
-            position: absolute; /* 부모(.map-section)를 기준으로 배치 */
-            bottom: 0; /* 아래에 배치 */
+            position: absolute;
+            bottom: 0;
             left: 50%;
-            transform: translateX(-50%); /* 가운데 정렬 */
+            transform: translateX(-50%);
             width: 100%;
             text-align: center;
             padding: 20px 0;
-            margin-top:500px;
             box-sizing: border-box;
         }
 
@@ -98,12 +95,11 @@
         <img src="ch2.png" alt="초대장">
         
         <div class="map-section">
-            <img src="ch3.png" alt="오시는 길 지도">
             <div class="address-overlay">
                 <p>주소 : 경기도 구리시 아천동 353-29 아치울2호공원</p>
                 <div class="map-buttons">
-                    <a href="https://kko.kakao.com/ouHV-qQ_jI" target="_blank">카카오맵 바로가기</a>
-                    <a href="https://map.naver.com/p/entry/place/1686757740?placePath=%2Fhome" target="_blank">네이버 지도 바로가기</a>
+                    <a href="https://kko.kakao.com/ouHV-qQ_jI" target="_blank">카카오맵</a>
+                    <a href="https://map.naver.com/p/entry/place/1686757740?placePath=%2Fhome" target="_blank">네이버 지도</a>
                 </div>
             </div>
         </div>
