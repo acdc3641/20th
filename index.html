@@ -1,106 +1,115 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>제20회 아치울 작은 음악회</title>
-  <meta property="og:url" content="https://acdc3641.github.io/20th" />
-  <meta property="og:title" content="초대합니다" />
-  <meta property="og:description" content="제20회 아치울 작은 음악회" />
-  <meta property="og:image" content="https://acdc3641.github.io/20th/th_1.png" />
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: #fff;
-    }
-    .container {
-      max-width: 100%;
-      margin: 0 auto;
-      line-height: 0; /* 이미지 사이 여백 제거 */
-    }
-    img {
-      display: block;
-      width: 100%;
-      height: auto;
-      margin: 0;
-      padding: 0;
-      border: none;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제20회 아치울 작은 음악회</title>
+    <meta property="og:url" content="https://acdc3641.github.io/20th" />
+    <meta property="og:title" content="초대합니다" />
+    <meta property="og:description" content="제20회 아치울 작은 음악회" />
+    <meta property="og:image" content="https://acdc3641.github.io/20th/th_1.png" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #fff;
+        }
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            line-height: 0; /* 이미지 사이 여백 제거 */
+        }
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
 
-    /* 새로운 섹션을 위한 스타일 */
-    .address-section {
-        width: 100%;
-        text-align: center;
-        padding-top: 250px; /* 이미지 위에 텍스트와 버튼을 올리기 위한 패딩 */
-        padding-bottom: 50px; /* 버튼 아래 여백 */
-    }
+        /* 오시는 길 섹션 스타일 */
+        .map-section {
+            position: relative; /* 중요: 내부 요소의 기준점 */
+            width: 100%;
+            padding-bottom: 100%; /* 이미지가 1:1 비율일 경우 (조절 필요) */
+            line-height: 0;
+        }
+        .map-section img {
+            position: absolute; /* 컨테이너에 맞춰 배치 */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
 
-    /* 주소 텍스트를 위한 스타일 */
-    .address-section p {
-        color: #2371CD;
-        font-size: 18px;
-        font-weight: bold;
-        line-height: 1.5;
-        margin-bottom: 20px;
-    }
+        /* 주소 텍스트와 버튼을 담는 컨테이너 */
+        .address-overlay {
+            position: absolute; /* 부모(.map-section)를 기준으로 배치 */
+            bottom: 0; /* 아래에 배치 */
+            left: 50%;
+            transform: translateX(-50%); /* 가운데 정렬 */
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+            box-sizing: border-box;
+        }
 
-    /* 버튼을 위한 스타일 */
-    .map-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 15px; /* 버튼 사이 간격 */
-    }
-    
-    .map-buttons a {
-      display: inline-block;
-      background-color: #2371CD;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 12px 24px;
-      border-radius: 9999px; /* 버튼 모서리를 둥글게 */
-      font-size: 16px;
-      line-height: 1.5;
-      white-space: nowrap; /* 텍스트 줄바꿈 방지 */
-    }
+        .address-overlay p {
+            color: #2371CD;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
 
-    /* 모바일 화면 (일반적으로 768px 이하) */
-    @media screen and (max-width: 768px) {
-      body {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-      }
+        .map-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .map-buttons a {
+            display: inline-block;
+            background-color: #2371CD;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 12px 24px;
+            border-radius: 9999px;
+            font-size: 16px;
+            line-height: 1.5;
+            white-space: nowrap;
+        }
 
-      .map-buttons {
-        flex-direction: column; /* 세로로 정렬 */
-        align-items: center; /* 가운데 정렬 */
-      }
-    }
-  </style>
+        @media screen and (max-width: 768px) {
+            .map-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <img src="ch1.png" alt="포스터">
-    <img src="ch2.png" alt="초대장">
-    <img src="ch3.png" alt="오시는 길">
-    
-    <!-- 주소와 버튼이 들어갈 섹션 -->
-    <div class="address-section">
-      <p>주소 : 경기도 구리시 아천동 353-29 아치울2호공원</p>
-      
-      <!-- 지도 바로가기 버튼 -->
-      <div class="map-buttons">
-        <a href="https://kko.kakao.com/ouHV-qQ_jI"_blank">카카오맵 바로가기</a>
-        <a href="https://map.naver.com/p/entry/place/1686757740?placePath=%2Fhome" target="_blank">네이버 지도 바로가기</a>
-      </div>
+    <div class="container">
+        <img src="ch1.png" alt="포스터">
+        <img src="ch2.png" alt="초대장">
+        
+        <div class="map-section">
+            <img src="ch3.png" alt="오시는 길 지도">
+            <div class="address-overlay">
+                <p>주소 : 경기도 구리시 아천동 353-29 아치울2호공원</p>
+                <div class="map-buttons">
+                    <a href="https://kko.kakao.com/ouHV-qQ_jI" target="_blank">카카오맵 바로가기</a>
+                    <a href="https://map.naver.com/p/entry/place/1686757740?placePath=%2Fhome" target="_blank">네이버 지도 바로가기</a>
+                </div>
+            </div>
+        </div>
+        
+        <img src="ch4.png" alt="프로그램안내">
+        <img src="ch5.png" alt="프로그램안내2">
+        <img src="ch6.png" alt="프로그램안내3">
+        <img src="ch7.png" alt="배치도">
     </div>
-    
-    <img src="ch4.png" alt="프로그램안내">
-    <img src="ch5.png" alt="프로그램안내2">
-    <img src="ch6.png" alt="프로그램안내3">
-    <img src="ch7.png" alt="배치도">
-  </div>
 </body>
 </html>
