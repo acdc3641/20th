@@ -42,34 +42,34 @@
         }
         .overlay-content {
             position: absolute;
-            bottom: 0; /* 이미지 하단에 붙임 */
+            bottom: 20px; /* 이미지 하단에서 20px 위 */
             left: 50%;
             transform: translateX(-50%);
             width: 100%;
-            padding: 20px 10px;
-            background: rgba(255, 255, 255, 0.9); /* 흰색 반투명 박스 */
             text-align: center;
         }
         .overlay-content p {
             font-size: 16px;
             font-weight: bold;
-            color: #333;
-            margin: 0 0 12px;
+            color: #1a1a1a;
+            margin: 0 0 16px;
+            text-shadow: 0 0 5px rgba(255,255,255,0.8);
         }
         .buttons a {
             display: inline-block;
-            margin: 5px 8px;
-            padding: 10px 20px;
-            background: #2d7be5;
+            margin: 6px 12px;
+            padding: 12px 26px; /* ← 기존보다 약 20% 확대 */
+            background: #2371CD; /* 버튼 색상 변경 */
             color: #fff;
             text-decoration: none;
-            border-radius: 20px;
-            font-size: 14px;
+            border-radius: 24px; /* 크기에 맞춰 radius도 살짝 조정 */
+            font-size: 16px; /* 글씨도 키움 */
             font-weight: bold;
-            transition: background 0.3s;
+            transition: background 0.3s, transform 0.2s;
         }
         .buttons a:hover {
-            background: #1a5ec9;
+            background: #195ba6;
+            transform: scale(1.05);
         }
     </style>
 </head>
