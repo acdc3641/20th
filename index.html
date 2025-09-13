@@ -2,6 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>제20회 아치울 작은 음악회</title>
   <meta property="og:url" content="https://acdc3641.github.io/20th" />
   <meta property="og:title" content="초대합니다" />
@@ -27,29 +28,81 @@
       border: none;
     }
 
-    /* 모바일 화면 (일반적으로 768px 이하) */
-@media screen and (max-width: 768px) {
-  /* 페이지 전체 너비를 100%로 설정하고 여백을 없앱니다. */
-  body {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
+    /* 카카오맵과 버튼을 위한 스타일 */
+    .map-section {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
 
-  /* 만약 특정 컨테이너에 여백이 있다면 해당 클래스/ID를 사용합니다. */
-  /* .container {
-    width: 100%;
-    max-width: none; /* 최대 너비 제한 해제 */
-    margin: 0;
-    padding: 0;
-  } */
-}
+    .map-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px; /* 버튼 사이 간격 */
+      padding: 20px 0;
+      background: url('ch3.png') no-repeat center center/cover; /* 배경 이미지 적용 */
+    }
+    
+    .map-buttons a {
+      display: inline-block;
+      background-color: #2371CD;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 16px;
+      line-height: 1.5;
+      white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+    }
+
+    .map-buttons a:hover {
+      background-color: #1a5699;
+    }
+
+    /* 모바일 화면 (일반적으로 768px 이하) */
+    @media screen and (max-width: 768px) {
+      body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .map-buttons {
+        flex-direction: column; /* 세로로 정렬 */
+        align-items: center; /* 가운데 정렬 */
+      }
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <img src="ch1.png" alt="포스터">
     <img src="ch2.png" alt="초대장">
+    
+    <!-- 카카오맵과 버튼이 들어갈 섹션 -->
+    <div class="map-section">
+      <img src="ch3.png" alt="배경" style="position: absolute; top: 0; left: 0; z-index: -1;">
+      
+      <!-- 카카오맵 지도 -->
+      <div id="daumRoughmapContainer1757774405078" class="root_daum_roughmap root_daum_roughmap_landing" style="position: relative; z-index: 1;"></div>
+      <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+      <script charset="UTF-8">
+        new daum.roughmap.Lander({
+          "timestamp" : "1757774405078",
+          "key" : "93imuozy6yz",
+          "mapWidth" : "100%", /* 지도를 화면 너비에 맞게 조정 */
+          "mapHeight" : "360"
+        }).render();
+      </script>
+      
+      <!-- 지도 바로가기 버튼 -->
+      <div class="map-buttons">
+        <a href="https://kko.kakao.com/R494h0ozZN" target="_blank">카카오맵 바로가기</a>
+        <a href="https://map.naver.com/p/entry/place/1686757740?placePath=%2Fhome"_blank">네이버 지도 바로가기</a>
+      </div>
+    </div>
+    
     <img src="ch4.png" alt="프로그램안내">
     <img src="ch5.png" alt="프로그램안내2">
     <img src="ch6.png" alt="프로그램안내3">
