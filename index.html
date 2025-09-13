@@ -28,14 +28,29 @@
       border: none;
     }
 
+    /* 새로운 섹션을 위한 스타일 */
+    .address-section {
+        background: url('ch32.jpg') no-repeat center center/cover;
+        width: 100%;
+        text-align: center;
+        padding-top: 250px; /* 이미지 위에 텍스트와 버튼을 올리기 위한 패딩 */
+        padding-bottom: 50px; /* 버튼 아래 여백 */
+    }
+
+    /* 주소 텍스트를 위한 스타일 */
+    .address-section p {
+        color: black;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
     /* 버튼을 위한 스타일 */
     .map-buttons {
       display: flex;
       justify-content: center;
       gap: 15px; /* 버튼 사이 간격 */
-      padding: 20px 0;
-      background: url('ch3.png') no-repeat center center/cover; /* 배경 이미지 적용 */
-      background-size: 100% auto; /* 배경 이미지 너비를 컨테이너에 맞춤 */
     }
     
     .map-buttons a {
@@ -74,15 +89,16 @@
   <div class="container">
     <img src="ch1.png" alt="포스터">
     <img src="ch2.png" alt="초대장">
+    <img src="ch3.jpg" alt="오시는 길">
     
-    <!-- 버튼이 들어갈 섹션 -->
-    <div class="map-section">
-      <img src="ch3.png" alt="배경">
-<p class="address-text">주소 : 경기도 구리시 아천동 353-29 아치울2호공원</p>
+    <!-- 주소와 버튼이 들어갈 섹션 -->
+    <div class="address-section">
+      <p>주소 : 경기도 구리시 아천동 353-29 아치울2호공원</p>
+      
       <!-- 지도 바로가기 버튼 -->
       <div class="map-buttons">
-        <a href="https://map.kakao.com" target="_blank">카카오맵 바로가기</a>
-        <a href="https://map.naver.com" target="_blank">네이버 지도 바로가기</a>
+        <a href="https://kko.kakao.com/ouHV-qQ_jI"_blank">카카오맵 바로가기</a>
+        <a href="https://map.naver.com/p/entry/place/1686757740?placePath=%2Fhome" target="_blank">네이버 지도 바로가기</a>
       </div>
     </div>
     
